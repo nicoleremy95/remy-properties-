@@ -1,9 +1,13 @@
 import React from 'react'
+import Featured from '../../components/Featured/Featured';
+import Contact from '../../components/Contact/Contact';
 
 export default function Home() {
     return (
         <div>
-            <h1>Home</h1>
+            <Featured/>
+            <Contact/>
+            
         </div>
     )
 }

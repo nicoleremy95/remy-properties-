@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  appbar: {
+    backgroundColor: 'white'
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -28,6 +31,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    color: 'black',
+    textTransform: 'uppercase'
   },
   search: {
     position: 'relative',
@@ -78,6 +83,9 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  navigation: {
+    textTransform: 'uppercase'
+  }
 }));
 
 export default function Appbar() {
@@ -166,18 +174,17 @@ export default function Appbar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <IconButton
             edge="start"
             className={classes.menuButton}
-            color="inherit"
             aria-label="open drawer"
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            remy properties
+          <Typography className={classes.title}  noWrap>
+            <h1>remy properties</h1>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -194,14 +201,14 @@ export default function Appbar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="property listings" color="inherit">
-                <h1>about</h1>
+            <IconButton aria-label="property listings">
+                <h2 className={classes.navigation} >about</h2>
             </IconButton>
-            <IconButton aria-label="property listings" color="inherit">
-                <h1>properties</h1>
+            <IconButton aria-label="property listings">
+                <h2 className={classes.navigation} >properties</h2>
             </IconButton>
-            <IconButton aria-label="company people" color="inherit">
-                <h1>people</h1>
+            <IconButton aria-label="company people">
+                <h2 className={classes.navigation} >people</h2>
             </IconButton>
             <IconButton
               edge="end"
@@ -209,7 +216,6 @@ export default function Appbar() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
             >
               contact
             </IconButton>
@@ -220,7 +226,6 @@ export default function Appbar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit"
             >
               <MoreIcon />
             </IconButton>
