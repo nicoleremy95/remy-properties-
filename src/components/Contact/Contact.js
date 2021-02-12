@@ -7,6 +7,7 @@ const useStyles = makeStyles((Theme) =>
   createStyles({
     text: {
         textAlign: "center",
+        fontStyle: 'italic'
     },
   }),
 );
