@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
+import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -14,6 +15,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import RemyLogo from '../../images/Remy Properties Logo.png'
+import { Link } from 'react-router-dom';
 import './Appbar.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -84,8 +87,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   navigation: {
-    textTransform: 'uppercase'
-  }
+    textTransform: 'capitalize'
+  },
+  appBarLinkBlack: {
+    textDecoration: "none",
+    color: "black !important"
+  },
 }));
 
 export default function Appbar() {
@@ -183,8 +190,11 @@ export default function Appbar() {
           >
             <MenuIcon />
           </IconButton>
+          {/* <img src={RemyLogo}/> */}
           <Typography className={classes.title}  noWrap>
+            <Link to="/" className={classes.appBarLinkBlack}>
             <h1>remy properties</h1>
+            </Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -202,22 +212,30 @@ export default function Appbar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="property listings">
-                <h2 className={classes.navigation} >about</h2>
+              <Link to="/about" className={classes.appBarLinkBlack}>
+                <h4 className={classes.navigation} >about</h4>
+              </Link>
             </IconButton>
             <IconButton aria-label="property listings">
-                <h2 className={classes.navigation} >properties</h2>
+                <Link to="/properties" className={classes.appBarLinkBlack}>
+                  <h4 className={classes.navigation} >properties</h4>
+                </Link>
             </IconButton>
             <IconButton aria-label="company people">
-                <h2 className={classes.navigation} >people</h2>
+                <Link to="/people" className={classes.appBarLinkBlack}>
+                  <h4 className={classes.navigation} >people</h4>
+                </Link>
             </IconButton>
             <IconButton
               edge="end"
               aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              // aria-controls={menuId}
+              // aria-haspopup="true"
+              // onClick={handleProfileMenuOpen}
             >
-              contact
+              <Link to="/contact" className={classes.appBarLinkBlack}>
+                <Button variant="contained" >contact</Button>
+              </Link>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
