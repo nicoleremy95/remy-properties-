@@ -14,6 +14,8 @@ const useStyles = makeStyles((Theme) =>
         display: "block",
         marginLeft: "auto",
         marginRight: "auto",
+        boxShadow: "10px 10px 5px #ccc",
+        
     },
     text: {
         textAlign: 'center'
@@ -31,11 +33,11 @@ export default function EmployeeCards(props) {
         <div className={classes.employee}>
             <img className ={classes.image} src={props.img} alt={props.name}/>
             <div className={classes.text}>
-                <h3>{props.name}</h3>
+                <h4>{props.name}</h4>
                 <h3 className={classes.position}>{props.position}</h3>
-                <h3 className={classes.position}>{props.properties}</h3>
-                <h4>{props.phone}</h4>
-                <h4>{props.email}</h4>
+                <h4 className={classes.position}>{props.properties}</h4>
+                <p>{props.phone}</p>
+                <p>{props.email}</p>
             </div>  
         </div>
     )

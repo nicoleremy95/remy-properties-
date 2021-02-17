@@ -82,7 +82,7 @@ export default function PropertyCards() {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.box}>
             {propertiesArr.map(property=>(
                     <div className={classes.box}> 
                     <Card className={classes.root}>
