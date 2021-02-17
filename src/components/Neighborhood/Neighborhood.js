@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import {Container, Grid} from '@material-ui/core/';
 import ButtonRemy from '../ButtonRemy/ButtonRemy';
 import FadeInSection from '../FadeIn/FadeInSection';
+import FadeInHorizontalRight from '../FadeInHorizontalRight/FadeInHorizontalRight';
+import FadeInHorizontalLeft from '../FadeInHorizontalLeft/FadeInHorizontalLeft';
 
 const useStyles = makeStyles((theme)=>({
     colorText: {
@@ -81,14 +83,18 @@ export default function Neighborhood(props) {
                 </Grid>
                 <Grid item lg={6}>
                     <img className={classes.background} src={props.image} alt={props.name}/>
-                    <img className={classes.overlay} src={props.image} alt={classes.name}/>
+                    <FadeInHorizontalRight>
+                        <img className={classes.overlay} src={props.image} alt={classes.name}/>
+                    </FadeInHorizontalRight>
                 </Grid>
             </Grid> 
             :
             <Grid container>
                 <Grid item lg={6}>
                     <img className={classes.backgroundRight} src={props.image} alt={props.name}/>
-                    <img className={classes.overlayRight} src={props.image} alt={props.name}/>
+                    <FadeInHorizontalLeft>
+                        <img className={classes.overlayRight} src={props.image} alt={props.name}/>
+                    </FadeInHorizontalLeft>
                 </Grid>
                 <Grid item lg={6}>
                     <Container maxWidth="sm">
