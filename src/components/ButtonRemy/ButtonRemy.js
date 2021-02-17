@@ -28,7 +28,9 @@ export default function ButtonRemy(props) {
     return (
         <div>
             <button className={classes.outline}>
-                <h3 className={classes.textStyle}>{props.text}</h3>
+                {/* <a href={props.link}> */}
+                    <h3 className={classes.textStyle}>{props.text}</h3>
+                {/* </a> */}
             </button>
         </div>
     )

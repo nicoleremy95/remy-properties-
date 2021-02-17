@@ -83,18 +83,14 @@ export default function Neighborhood(props) {
                 </Grid>
                 <Grid item lg={6}>
                     <img className={classes.background} src={props.image} alt={props.name}/>
-                    <FadeInHorizontalRight>
                         <img className={classes.overlay} src={props.image} alt={classes.name}/>
-                    </FadeInHorizontalRight>
                 </Grid>
             </Grid> 
             :
             <Grid container>
                 <Grid item lg={6}>
                     <img className={classes.backgroundRight} src={props.image} alt={props.name}/>
-                    <FadeInHorizontalLeft>
                         <img className={classes.overlayRight} src={props.image} alt={props.name}/>
-                    </FadeInHorizontalLeft>
                 </Grid>
                 <Grid item lg={6}>
                     <Container maxWidth="sm">
