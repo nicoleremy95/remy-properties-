@@ -6,7 +6,7 @@ const useStyles = makeStyles((Theme) =>
   createStyles({
     employee: {
         marginBottom: "100px",
-        // width: "400px"
+        width: '400px'
     },
     image: {
         borderRadius: "50%",

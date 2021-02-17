@@ -77,19 +77,18 @@ const employeeArr =[
 
 const useStyles = makeStyles((Theme) =>
     createStyles({
-    //   root: {
-    //     display: "flex",
-    //     justifyContent: "space-evenly",
-    //     flexWrap: "wrap",
-    //   }
+      box: {
+        display: "flex",
+        justifyContent: "space-evenly",
+        flexWrap: "wrap",
+      }
     }),
   );
   
 export default function Employees() {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <Container maxWidth="md">
+        <div className={classes.box}>
                 {employeeArr.map(employee=>(
                     <EmployeeCards
                         name={employee.name}
@@ -99,9 +98,7 @@ export default function Employees() {
                         phone={employee.phone}
                         email={employee.email}
                     />
-                ))}
-            </Container>
-            
+                ))}            
         </div>
     )
 }
