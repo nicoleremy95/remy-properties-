@@ -9,6 +9,7 @@ import Nicole from '../../images/Nicole.jpg';
 import Tanya from '../../images/Tanya.jpg';
 import Claire from '../../images/Claire.jpg';
 import EmployeeCards from '../EmployeeCards/EmployeeCards';
+import { createStyles, makeStyles} from '@material-ui/core/styles';
 
 
 const employeeArr =[
@@ -72,9 +73,22 @@ const employeeArr =[
     },
 ]
 
+
+
+const useStyles = makeStyles((Theme) =>
+    createStyles({
+    //   root: {
+    //     display: "flex",
+    //     justifyContent: "space-evenly",
+    //     flexWrap: "wrap",
+    //   }
+    }),
+  );
+  
 export default function Employees() {
+    const classes = useStyles();
     return (
-        <div>
+        <div className={classes.root}>
             <Container maxWidth="md">
                 {employeeArr.map(employee=>(
                     <EmployeeCards

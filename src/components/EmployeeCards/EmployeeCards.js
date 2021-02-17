@@ -5,7 +5,8 @@ import { createStyles, makeStyles} from '@material-ui/core/styles';
 const useStyles = makeStyles((Theme) =>
   createStyles({
     employee: {
-        marginBottom: "100px"
+        marginBottom: "100px",
+        // width: "400px"
     },
     image: {
         borderRadius: "50%",
@@ -18,7 +19,7 @@ const useStyles = makeStyles((Theme) =>
         textAlign: 'center'
     },
     position: {
-        fontStyle: "italic"
+        fontStyle: "italic",
     }
   }),
 );
