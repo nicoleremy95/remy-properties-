@@ -16,6 +16,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+
 import './Appbar.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   box:{
-    marginBottom: '200px'
+    marginBottom: '120px'
   },
   appbar: {
     backgroundColor: 'white',
@@ -134,8 +136,16 @@ export default function Appbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+          <Link to="/properties" className={classes.appBarLinkBlack}>
+            <h4 className={classes.navigation} >properties</h4>
+          </Link>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+          <Link to="/neighborhoods" className={classes.appBarLinkBlack}>
+            <h4 className={classes.navigation} >neighborhoods</h4>
+          </Link>
+      </MenuItem>
     </Menu>
   );
 
@@ -161,6 +171,12 @@ export default function Appbar() {
             <NotificationsIcon />
         </IconButton>
         <p>properties</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton aria-label="show 11 new notifications" color="inherit">
+            <NotificationsIcon />
+        </IconButton>
+        <p>neighborhoods</p>
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
@@ -220,11 +236,6 @@ export default function Appbar() {
                 <h4 className={classes.navigation} >about</h4>
               </Link>
             </IconButton>
-            <IconButton aria-label="property listings">
-                <Link to="/properties" className={classes.appBarLinkBlack}>
-                  <h4 className={classes.navigation} >properties</h4>
-                </Link>
-            </IconButton>
             <IconButton aria-label="company people">
                 <Link to="/people" className={classes.appBarLinkBlack}>
                   <h4 className={classes.navigation} >people</h4>
@@ -233,14 +244,20 @@ export default function Appbar() {
             <IconButton
               edge="end"
               aria-label="account of current user"
-              // aria-controls={menuId}
-              // aria-haspopup="true"
-              // onClick={handleProfileMenuOpen}
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
             >
-              <Link to="/contact" className={classes.appBarLinkBlack}>
-                <Button variant="contained" >contact</Button>
-              </Link>
+                <h4 className={classes.navigation} >rent</h4>
             </IconButton>
+            <IconButton aria-label="company people">
+                <Link to="/contact" className={classes.appBarLinkBlack}>
+                  <h4 className={classes.navigation} >contact us</h4>
+                </Link>
+            </IconButton>
+            <a href="https://remyproperties.managebuilding.com/Resident/rental-application/" target="blank" className={classes.appBarLinkBlack}>
+              <Button variant="contained" >apply today!</Button>
+            </a>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

@@ -5,9 +5,14 @@ import {Container, Grid} from '@material-ui/core/';
 
 const useStyles = makeStyles((Theme) =>
     createStyles({
+        box: {
+            backgroundColor: '#f2f2f2'
+        },
         title: {
             textAlign: "center",
-            marginBottom: "100px"
+            marginBottom: "100px",
+            paddingTop: '20px'
+
         },
     })
 );
@@ -15,7 +20,7 @@ export default function Properties() {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.box}>
             <Container>
                 <h1 className={classes.title}>Properties</h1>
                 <PropertyCards/>

@@ -4,6 +4,7 @@ import Appbar from '../src/components/Appbar/Appbar';
 import About from '../src/pages/About/About';
 import People from '../src/pages/People/People';
 import Properties from '../src/pages/Properties/Properties';
+import Neighborhoods from '../src/pages/Neighborhoods/Neighborhoods';
 import Contact from '../src/pages/Contact/Contact';
 import Home from '../src/pages/Home/Home';
 import Footer from '../src/components/Footer/Footer';
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/properties">
             <Properties/>
+          </Route>
+          <Route exact path="/neighborhoods">
+            <Neighborhoods/>
           </Route>
           <Route exact path="/about">
             <About/>
