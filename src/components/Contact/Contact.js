@@ -19,7 +19,9 @@ export default function Contact() {
         <div>
             <Container maxWidth="md" className={classes.text}>
                 <h3 >Let us know how our team can help you find your dream home today.</h3>
-                <ButtonRemy/>
+                <ButtonRemy
+                    text="contact us"
+                />
             </Container>
         </div>
     )

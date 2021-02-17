@@ -36,3 +36,10 @@ p {
 a {
   font-family: 'Raleway', sans-serif;
 }
+
+:root {
+  --mainColor: #3882A7;
+  --secondaryColor: #C2AB92;
+  --thirdColor: #595755;
+  --fourthColor: #F6CA43;
+}

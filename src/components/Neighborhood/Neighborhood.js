@@ -5,6 +5,7 @@ import {makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import {Container, Grid} from '@material-ui/core/';
+import ButtonRemy from '../ButtonRemy/ButtonRemy';
 
 const useStyles = makeStyles((theme)=>({
     colorText: {
@@ -67,7 +68,11 @@ export default function Neighborhood(props) {
                             <h4 className={classes.colorText}>view the extraordinary</h4>
                             <h1 className={classes.title}>Homes in {props.name}</h1>
                             <p className={classes.paragraph}>{props.description}</p>
-                            <Button variant="contained"><Link>view our properties</Link></Button>
+                            <Link>
+                                <ButtonRemy
+                                    text="view our properties"
+                                />
+                            </Link>
                         </div>
                     </Container>
                 </Grid>
@@ -88,7 +93,11 @@ export default function Neighborhood(props) {
                             <h4 className={classes.colorText}>view the extraordinary</h4>
                             <h1 className={classes.title}>Homes in {props.name}</h1>
                             <p className={classes.paragraph}> {props.description}</p>
-                            <Button variant="contained"><Link>view our properties</Link></Button>
+                            <Link>
+                                <ButtonRemy
+                                    text="view our properties"
+                                />
+                            </Link>
                         </div>
                     </Container>
                 </Grid>
