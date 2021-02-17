@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import {Container, Grid} from '@material-ui/core/';
 import ButtonRemy from '../ButtonRemy/ButtonRemy';
+import FadeInSection from '../FadeIn/FadeInSection';
 
 const useStyles = makeStyles((theme)=>({
     colorText: {
@@ -64,6 +65,7 @@ export default function Neighborhood(props) {
             <Grid container>
                 <Grid item lg={6}>
                     <Container maxWidth="sm">
+                        <FadeInSection>
                         <div className={classes.text}>
                             <h4 className={classes.colorText}>view the extraordinary</h4>
                             <h1 className={classes.title}>Homes in {props.name}</h1>
@@ -74,6 +76,7 @@ export default function Neighborhood(props) {
                                 />
                             </Link>
                         </div>
+                        </FadeInSection>
                     </Container>
                 </Grid>
                 <Grid item lg={6}>
@@ -89,20 +92,22 @@ export default function Neighborhood(props) {
                 </Grid>
                 <Grid item lg={6}>
                     <Container maxWidth="sm">
-                    <div className={classes.textRight}>
-                            <h4 className={classes.colorText}>view the extraordinary</h4>
-                            <h1 className={classes.title}>Homes in {props.name}</h1>
-                            <p className={classes.paragraph}> {props.description}</p>
-                            <Link>
-                                <ButtonRemy
-                                    text="view our properties"
-                                />
-                            </Link>
-                        </div>
+                        <FadeInSection>
+                            <div className={classes.textRight}>
+                                <h4 className={classes.colorText}>view the extraordinary</h4>
+                                <h1 className={classes.title}>Homes in {props.name}</h1>
+                                <p className={classes.paragraph}> {props.description}</p>
+                                <Link>
+                                    <ButtonRemy
+                                        text="view our properties"
+                                    />
+                                </Link>
+                            </div>
+                        </FadeInSection>
+                        
                     </Container>
                 </Grid>
             </Grid>   }
-            
         </div>
     )
 }

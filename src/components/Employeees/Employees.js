@@ -10,7 +10,7 @@ import Tanya from '../../images/Tanya.jpg';
 import Claire from '../../images/Claire.jpg';
 import EmployeeCards from '../EmployeeCards/EmployeeCards';
 import { createStyles, makeStyles} from '@material-ui/core/styles';
-
+import FadeInSection from '../FadeIn/FadeInSection';
 
 const employeeArr =[
     {
@@ -91,14 +91,17 @@ export default function Employees() {
     return (
         <div className={classes.box}>
                 {employeeArr.map(employee=>(
-                    <EmployeeCards
-                        name={employee.name}
-                        img={employee.img}
-                        position={employee.position}
-                        properties={employee.properties}
-                        phone={employee.phone}
-                        email={employee.email}
-                    />
+                    <FadeInSection key={employee}>
+                        <EmployeeCards
+                            name={employee.name}
+                            img={employee.img}
+                            position={employee.position}
+                            properties={employee.properties}
+                            phone={employee.phone}
+                            email={employee.email}
+                        />
+                    </FadeInSection>
+                    
                 ))}            
         </div>
     )
