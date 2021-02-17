@@ -6,11 +6,14 @@ import People from '../src/pages/People/People';
 import Properties from '../src/pages/Properties/Properties';
 import Contact from '../src/pages/Contact/Contact';
 import Home from '../src/pages/Home/Home';
+import Footer from '../src/components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop/>
         <Appbar/>
         <Switch>
           <Route exact path="/">
@@ -29,6 +32,7 @@ function App() {
             <Contact/>
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );

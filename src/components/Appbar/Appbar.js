@@ -15,7 +15,6 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import RemyLogo from '../../images/Remy Properties Logo.png'
 import { Link } from 'react-router-dom';
 import './Appbar.css';
 
@@ -23,8 +22,12 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  box:{
+    marginBottom: '200px'
+  },
   appbar: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -181,7 +184,8 @@ export default function Appbar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" className={classes.appbar}>
+      <div className={classes.box}>
+      <AppBar position="fixed" className={classes.appbar}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -252,6 +256,8 @@ export default function Appbar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      </div>
+      
     </div>
   );
 }
