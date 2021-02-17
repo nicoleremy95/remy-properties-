@@ -14,10 +14,31 @@ import { createStyles, makeStyles} from '@material-ui/core/styles';
 
 const employeeArr =[
     {
+        name: "Tanya",
+        img: Tanya,
+        position: "Leasing Manager",
+        phone: "(253) 365-2005",
+        email: "tonyaw@remy-properties.com"
+    },
+    {
+        name: "Rich",
+        img: Rich,
+        position: "Property Manager",
+        phone: "(253) 279-4242",
+        email: "richm@remy-properties.com"
+    },
+    {
         name: "Jeremy",
         img: Jeremy,
         position: "Maintenance Manager",
         phone: "(773)-710-9593",
+        email: "management@remy-properties.com"
+    },
+    {
+        name: "Jason",
+        img: Jason,
+        position: "Maintenance Worker",
+        phone: "(253) 441-1133",
         email: "management@remy-properties.com"
     },
     {
@@ -37,20 +58,6 @@ const employeeArr =[
         email: "management@remy-properties.com"
     },
     {
-        name: "Rich",
-        img: Rich,
-        position: "Property Manager",
-        phone: "(253) 279-4242",
-        email: "richm@remy-properties.com"
-    },
-    {
-        name: "Tanya",
-        img: Tanya,
-        position: "Leasing Manager",
-        phone: "(253) 365-2005",
-        email: "tonyaw@remy-properties.com"
-    },
-    {
         name: "Claire",
         img: Claire,
         position: "Office Manager",
@@ -64,13 +71,7 @@ const employeeArr =[
         phone: "(253) 625-7902",
         email: "nicoler@remy-properties.com"
     },
-    {
-        name: "Jason",
-        img: Jason,
-        position: "Maintenance Worker",
-        phone: "(253) 441-1133",
-        email: "management@remy-properties.com"
-    },
+    
 ]
 
 

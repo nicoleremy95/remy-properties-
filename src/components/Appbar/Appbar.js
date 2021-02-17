@@ -255,9 +255,14 @@ export default function Appbar() {
                   <h4 className={classes.navigation} >contact us</h4>
                 </Link>
             </IconButton>
-            <a href="https://remyproperties.managebuilding.com/Resident/rental-application/" target="blank" className={classes.appBarLinkBlack}>
-              <Button variant="contained" >apply today!</Button>
-            </a>
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+            >
+              <a href="https://remyproperties.managebuilding.com/Resident/rental-application/" target="blank" className={classes.appBarLinkBlack}>
+                <Button variant="contained" >apply today!</Button>
+              </a>
+            </IconButton>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
