@@ -203,13 +203,13 @@ export default function Appbar() {
       <div className={classes.box}>
       <AppBar position="fixed" className={classes.appbar}>
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             edge="start"
             className={classes.menuButton}
             aria-label="open drawer"
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           {/* <img src={RemyLogo}/> */}
           <Typography className={classes.title}  noWrap>
             <Link to="/" className={classes.appBarLinkBlack}>

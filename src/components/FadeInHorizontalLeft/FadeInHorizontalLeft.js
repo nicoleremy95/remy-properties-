@@ -11,11 +11,11 @@ export default function FadeInHorizontalLeft(props) {
       observer.observe(domRef.current);
     }, []);
     return (
-        <div
+      <div
         className={`fade-in-section-horizontal-left ${isVisible ? 'is-visible' : ''}`}
         ref={domRef}
-    >
+      >
         {props.children}
-    </div>
+      </div>
     )
 }

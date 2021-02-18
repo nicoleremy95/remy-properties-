@@ -1,5 +1,6 @@
 import React from 'react'
 import Tacoma from '../../images/Tacoma.jpg';
+import Tacoma800x800 from '../../images/Tacoma800x800.jpg';
 import AmericanLakeSquare from '../../images/AmericanLakeSquare.jpg';
 import {makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -11,8 +12,11 @@ import FadeInHorizontalRight from '../FadeInHorizontalRight/FadeInHorizontalRigh
 import FadeInHorizontalLeft from '../FadeInHorizontalLeft/FadeInHorizontalLeft';
 
 const useStyles = makeStyles((theme)=>({
+    box: {
+        // marginBottom: "-510px"
+    },
     colorText: {
-        color: "#3882A7",
+        color: "var(--mainColor)",
         textTransform: "uppercase"
     },
     text: {
@@ -31,9 +35,9 @@ const useStyles = makeStyles((theme)=>({
     },
     background: {
         // opacity: .5,
-        filter: 'grayscale(70%) blur(1px)',
-        background: AmericanLakeSquare
-        // backgroundImage: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
+        filter: 'grayscale(70%)',
+        // background: AmericanLakeSquare,
+        // filter: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
     },
     overlay: {
         position: 'relative',
@@ -45,8 +49,8 @@ const useStyles = makeStyles((theme)=>({
     backgroundRight: {
         // opacity: .5,
         width: '100%',
-        filter: 'grayscale(70%) blur(1px)',
-        background: AmericanLakeSquare
+        filter: 'grayscale(70%) ',
+        // background: AmericanLakeSquare,
         // backgroundImage: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
     },
     overlayRight: {
@@ -55,14 +59,20 @@ const useStyles = makeStyles((theme)=>({
         bottom: 600,
         left: 300,
 
-    }
+    },
+    sectionDesktop: {
+        display: 'none',
+        [theme.breakpoints.up('lg')]: {
+          display: 'flex',
+        },
+    },
 }));
 
 export default function Neighborhood(props) {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.box}>
             {props.boolean? 
             <Grid container>
                 <Grid item lg={6}>
@@ -83,14 +93,18 @@ export default function Neighborhood(props) {
                 </Grid>
                 <Grid item lg={6}>
                     <img className={classes.background} src={props.image} alt={props.name}/>
+                    <div className={classes.sectionDesktop}>
                         <img className={classes.overlay} src={props.image} alt={classes.name}/>
+                    </div>
                 </Grid>
             </Grid> 
             :
             <Grid container>
                 <Grid item lg={6}>
                     <img className={classes.backgroundRight} src={props.image} alt={props.name}/>
+                    <div className={classes.sectionDesktop}>
                         <img className={classes.overlayRight} src={props.image} alt={props.name}/>
+                    </div>
                 </Grid>
                 <Grid item lg={6}>
                     <Container maxWidth="sm">
