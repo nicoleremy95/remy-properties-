@@ -8,7 +8,6 @@ const useStyles = makeStyles((Theme) =>
     text: {
         textAlign: "center",
         fontStyle: 'italic',
-        marginTop: '-180px'
     },
   }),
 );
@@ -16,11 +15,12 @@ export default function Contact() {
     const classes = useStyles();
 
     return (
-        <div>
+        <div className={classes.box}>
             <Container maxWidth="md" className={classes.text}>
                 <h3 >Let us know how our team can help you find your dream home today.</h3>
                 <ButtonRemy
                     text="contact us"
+                    link="/contact"
                 />
             </Container>
         </div>

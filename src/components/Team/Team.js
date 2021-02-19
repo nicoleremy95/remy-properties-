@@ -6,10 +6,8 @@ const useStyles = makeStyles((theme)=>({
     box: {
         backgroundColor: 'white',
         opacity: '80%',
-        // width: '50%',
-        // left: "auto",
-        // right: "auto",
-        // zIndex: -1
+        textAlign: 'center',
+        padding: "2vw"
     },
     title: {
         fontSize: '50px',
@@ -18,9 +16,9 @@ const useStyles = makeStyles((theme)=>({
         // zIndex: 1
     },
     subTitle: {
-        //    fontSize: '50px',
         color: "--var(darkColor)",
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        textTransform: 'uppercase'
     },
     icon: {
         color: '--var(darkColor)'

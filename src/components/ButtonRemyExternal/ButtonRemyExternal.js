@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button'; 
 import {makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme)=>({
     outline: {
@@ -23,7 +22,6 @@ const useStyles = makeStyles((theme)=>({
     },
     link: {
         textDecoration: 'none'
-
     }
 }));
 
@@ -33,9 +31,9 @@ export default function ButtonRemy(props) {
     return (
         <div>
             <button className={classes.outline}>
-                <Link to={props.link} className={classes.link}>
+                <a href={props.link} target="blank" className={classes.link}>
                     <h3 className={classes.textStyle}>{props.text}</h3>
-                </Link>
+                </a>
             </button>
         </div>
     )

@@ -6,41 +6,35 @@ import Team from '../Team/Team';
 import AllenmoreBrownstonesFeatured from '../../images/AllenmoreBrownstonesFeatured.jpg'
 import GravellyLakeBrownstonesFeatured from '../../images/GravellyLakeBrownstonesFeatured.jpg'
 import {Container, Grid} from '@material-ui/core/';
+import LetUsKnow from '../LetUsKnow/LetUsKnow';
 
 const useStyles = makeStyles((theme)=>({
     img: {
-        // width: "100%",
-        height: '400px'
+        width: "100%",
+        // height: '400px'
 
     },
+    parent: {
+        position: 'relative'
+    },
     team: {
-        position: 'relative',
-        bottom: 300,
-        textAlign: 'center'
+        position: 'absolute',
+        top: 100,        
     }
 }));
 
-const featuredArr =[lake, AllenmoreBrownstonesFeatured, GravellyLakeBrownstonesFeatured];
+const featuredArr =[lake, lake, lake];
 
 export default function Featured() {
     const classes = useStyles();
 
     return (
-        <div>
-            <div>
+        <div className={classes.parent}>
             <Carousel>
                 {featuredArr.map((image)=>(
                     <img alt="featured properties" className={classes.img} src={image}/>
                 ))}
             </Carousel>
-            </div>
-           
-            <div className={classes.team}>
-                <Container maxWidth="sm">
-                    <Team/>
-                </Container>
-            </div>
-
         </div>
     )
 }

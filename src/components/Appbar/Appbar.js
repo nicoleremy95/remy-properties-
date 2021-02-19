@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  contact: {
+    backgroundColor: 'black',
+    height: '300px'
+  },
   box:{
     marginBottom: '120px'
   },
@@ -35,10 +39,10 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
+    // display: 'none',
+    // [theme.breakpoints.up('sm')]: {
+    //   display: 'block',
+    // },
     color: 'black',
     textTransform: 'uppercase'
   },
@@ -203,15 +207,7 @@ export default function Appbar() {
       <div className={classes.box}>
       <AppBar position="fixed" className={classes.appbar}>
         <Toolbar>
-          {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton> */}
-          {/* <img src={RemyLogo}/> */}
-          <Typography className={classes.title}  noWrap>
+          <Typography className={classes.title}  >
             <Link to="/" className={classes.appBarLinkBlack}>
             <h1>remy properties</h1>
             </Link>

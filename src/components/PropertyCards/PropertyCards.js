@@ -70,15 +70,15 @@ const useStyles = makeStyles((Theme) =>
     createStyles({
         root: {
             maxWidth: 345,
-          },
-          media: {
+        },
+        media: {
             height: 140,
-          },
-          linkBlack: {
+        },
+        linkBlack: {
             textDecoration: "none",
             color: "black !important"
-          },
-          colorText: {
+        },
+        colorText: {
             color: "#3882A7",
             textTransform: "uppercase"
         },
@@ -132,31 +132,29 @@ export default function PropertyCards() {
     return (
         <div className={classes.box}>
             {propertiesArr.map(property=>(
-                    <div className={classes.box}> 
-                        <Grid container>
-                <Grid item lg={6}>
-                    <Container maxWidth="sm">
-                        <FadeInSection>
-                        <div className={classes.text}>
-                            <h4 className={classes.colorText}>{property.location}</h4>
-                            <h1 className={classes.title}>{property.name}</h1>
-                            <p className={classes.paragraph}>{property.description}</p>
-                            <Link>
-                                <ButtonRemy
-                                    text={property.name}
-                                    link={property.link}
-                                />
-                            </Link>
-                        </div>
-                        </FadeInSection>
-                    </Container>
-                </Grid>
-                <Grid item lg={6}>
-                    <img className={classes.background} src={property.img} alt={property.name}/>
-                    <img className={classes.overlay} src={property.img} alt={property.name}/>
-                </Grid>
-            </Grid> 
-                    </div>
+                    <Grid container>
+                        <Grid item lg={6}>
+                            <Container maxWidth="sm">
+                                <FadeInSection>
+                                <div className={classes.text}>
+                                    <h4 className={classes.colorText}>{property.location}</h4>
+                                    <h1 className={classes.title}>{property.name}</h1>
+                                    <p className={classes.paragraph}>{property.description}</p>
+                                    <Link>
+                                        <ButtonRemy
+                                            text={property.name}
+                                            link={property.link}
+                                        />
+                                    </Link>
+                                </div>
+                                </FadeInSection>
+                            </Container>
+                        </Grid>
+                        <Grid item lg={6}>
+                            <img className={classes.background} src={property.img} alt={property.name}/>
+                            <img className={classes.overlay} src={property.img} alt={property.name}/>
+                        </Grid>
+                    </Grid> 
                 ))}
         </div>
     )

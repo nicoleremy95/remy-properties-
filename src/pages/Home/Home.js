@@ -1,6 +1,6 @@
 import React from 'react'
 import Featured from '../../components/Featured/Featured';
-import Contact from '../../components/Contact/Contact';
+import LetUsKnow from '../../components/LetUsKnow/LetUsKnow';
 import { createStyles, makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles((Theme) =>
@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <div className={classes.box}>
             <Featured/>
-            <Contact/>  
+            <LetUsKnow/>  
         </div>
     )
 }
