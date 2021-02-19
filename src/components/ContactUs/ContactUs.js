@@ -22,8 +22,10 @@ const useStyles = makeStyles((theme)=>({
         marginTop: '7vh'
     },
     background: {
-        filter: 'grayscale(70%) ',
-        // backgroundImage: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
+        // filter: 'sepia(30%) ',
+        width: '100%',
+        opacity: '.5',
+        // backgroundImage: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%), url('src/images/AmericanLakeSquare.jpg')"
     },
     colorText: {
         color: "#3882A7",
@@ -39,13 +41,13 @@ const useStyles = makeStyles((theme)=>({
     },
     textOverlay: {
         position: 'absolute',
-        top: 200,
+        top: 100,
         left: 0,
         textAlign: 'center',
-        color: 'white',
+        color: 'black',
         fontStyle: 'italic',
-        fontSize: '8vh',
-        width: '100%'
+        fontSize: '4vw',
+        padding: '1vw'
     },
     parent: {
         position: 'relative',
@@ -83,9 +85,9 @@ export default function ContactUs() {
                     <div className={classes.parent}>
                         <img className={classes.background} src={AmericanLakeSquare} alt="American Lake"/>
                         <Container maxWidth="sm">
-                        <div className={classes.textOverlay}>
-                            <p >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
-                        </div>
+                            <div className={classes.textOverlay}>
+                                <p >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "</p>
+                            </div>
                         </Container>
                     </div>
                 </Grid>

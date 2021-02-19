@@ -8,7 +8,7 @@ import MailIcon from '@material-ui/icons/Mail';
 const useStyles = makeStyles((theme)=>({
     box: {
         backgroundColor: 'var(--footerColor)',
-        marginTop: '200px'
+        // marginTop: '200px'
     },
     logoLocation: {
         // width: '200px',
