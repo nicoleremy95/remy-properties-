@@ -3,10 +3,13 @@ import {makeStyles } from '@material-ui/core/styles';
 import Carousel from 'react-material-ui-carousel';
 import lake from '../../images/lake.jpg';
 import Team from '../Team/Team';
+import AllenmoreBrownstonesFeatured from '../../images/AllenmoreBrownstonesFeatured.jpg'
+import GravellyLakeBrownstonesFeatured from '../../images/GravellyLakeBrownstonesFeatured.jpg'
+import {Container, Grid} from '@material-ui/core/';
 
 const useStyles = makeStyles((theme)=>({
     img: {
-        width: "100%",
+        // width: "100%",
         height: '400px'
 
     },
@@ -17,7 +20,7 @@ const useStyles = makeStyles((theme)=>({
     }
 }));
 
-const featuredArr =[lake, lake, lake];
+const featuredArr =[lake, AllenmoreBrownstonesFeatured, GravellyLakeBrownstonesFeatured];
 
 export default function Featured() {
     const classes = useStyles();
@@ -33,7 +36,9 @@ export default function Featured() {
             </div>
            
             <div className={classes.team}>
-                <Team/>
+                <Container maxWidth="sm">
+                    <Team/>
+                </Container>
             </div>
 
         </div>

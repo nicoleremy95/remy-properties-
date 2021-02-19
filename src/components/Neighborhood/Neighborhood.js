@@ -35,14 +35,15 @@ const useStyles = makeStyles((theme)=>({
     },
     background: {
         // opacity: .5,
+        width: '100%',
         filter: 'grayscale(70%)',
         // background: AmericanLakeSquare,
         // filter: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
     },
     overlay: {
         position: 'relative',
-        maxHeight: '500px',
-        bottom: 700,
+        height: '500px',
+        bottom: 600,
         right: 100,
 
     },
@@ -56,7 +57,7 @@ const useStyles = makeStyles((theme)=>({
     overlayRight: {
         position: 'relative',
         height: '500px',
-        bottom: 600,
+        bottom: 550,
         left: 300,
 
     },

@@ -4,8 +4,8 @@ import {makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme)=>({
     box: {
         backgroundColor: "var(--darkColor)",
-        height: '300px',
-        width: "100%"
+        height: "30ch",
+        width: "auto"
     }
 }));
 
