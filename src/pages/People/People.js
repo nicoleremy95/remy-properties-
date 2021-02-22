@@ -10,8 +10,11 @@ const useStyles = makeStyles((theme)=>({
     title: {
         textAlign: "center",
         marginBottom: "100px",
-        paddingTop: '20px'
+        paddingTop: '20px',
+        color: "#3882A7",
+        textTransform: "uppercase"
     },
+    
 }));
 
 export default function People() {

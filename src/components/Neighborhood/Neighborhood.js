@@ -20,11 +20,11 @@ const useStyles = makeStyles((theme)=>({
         textTransform: "uppercase"
     },
     text: {
-        marginTop: "200px",
+        marginTop: '20vh',        
         paddingRight: '100px'
     },
     textRight: {
-        marginTop: "200px",
+        marginTop: '20vh',  
         paddingLeft: '100px'
     },
     title:{
@@ -94,18 +94,18 @@ export default function Neighborhood(props) {
                 </Grid>
                 <Grid item lg={6}>
                     <img className={classes.background} src={props.image} alt={props.name}/>
-                    <div className={classes.sectionDesktop}>
+                    {/* <div className={classes.sectionDesktop}>
                         <img className={classes.overlay} src={props.image} alt={classes.name}/>
-                    </div>
+                    </div> */}
                 </Grid>
             </Grid> 
             :
             <Grid container>
                 <Grid item lg={6}>
                     <img className={classes.backgroundRight} src={props.image} alt={props.name}/>
-                    <div className={classes.sectionDesktop}>
+                    {/* <div className={classes.sectionDesktop}>
                         <img className={classes.overlayRight} src={props.image} alt={props.name}/>
-                    </div>
+                    </div> */}
                 </Grid>
                 <Grid item lg={6}>
                     <Container maxWidth="sm">

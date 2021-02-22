@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme)=>({
     box: {
         backgroundColor: "var(--darkColor)",
         height: "30ch",
-        width: "auto"
+        width: "auto",
     },
 }));
 

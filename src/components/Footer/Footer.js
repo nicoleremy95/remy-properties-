@@ -8,7 +8,7 @@ import MailIcon from '@material-ui/icons/Mail';
 const useStyles = makeStyles((theme)=>({
     box: {
         backgroundColor: 'var(--footerColor)',
-        // marginTop: '200px'
+        padding: '5vw'
     },
     logoLocation: {
         // width: '200px',
@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme)=>({
         color: "white !important"
     },
     text: {
-        color: 'white'
+        color: 'white',
+        
     },
     textAtl: {
         color: 'var(--thirdColor)'
@@ -43,8 +44,18 @@ export default function Footer() {
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={4}>
                         <h2 className={classes.textAtl}>CONTACT US</h2>
-                        <a href="mailto: management@remy-properties.com" className={classes.text}><h4><MailIcon/>management@remy-properties.com</h4></a>
-                        <a href="Remy-properties.com" className={classes.text}>Remy-properties.com</a>
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            flexWrap: 'wrap',
+                            color: 'white'
+                        }}
+                        
+                        >
+                            <MailIcon/><span><a href="mailto: management@remy-properties.com" className={classes.text}>management@remy-properties.com</a></span>
+
+                        </div>
+                        {/* <br/> */}
                         <p className={classes.text}>10609 Gravelly Lake DR SW</p>
                         <p className={classes.text}>Lakewood WA 98499-1327</p>
                         <p className={classes.text}>(253) 625-7902</p>
@@ -55,6 +66,7 @@ export default function Footer() {
                         <Link to="/properties" className={classes.linkWhite}><h3>Properties</h3></Link>
                         <Link to="/people" className={classes.linkWhite}><h3>People</h3></Link>
                         <Link to="/contact" className={classes.linkWhite}><h3>Contact Us</h3></Link>
+                        <a href="remy-properties.com" className={classes.linkWhite}><h3>Apply for Housing</h3></a>
                     </Grid>
                 </Grid>
                 
