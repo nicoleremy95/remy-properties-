@@ -5,7 +5,7 @@ import { Container } from '@material-ui/core';
 
 const useStyles = makeStyles((theme)=>({
     box: {
-        backgroundColor: '#f2f2f2'
+        backgroundColor: 'var(--backgroundColor)'
     },
     title: {
         textAlign: "center",

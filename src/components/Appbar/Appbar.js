@@ -17,7 +17,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-
+import ButtonRemyExternal from '../ButtonRemyExternal/ButtonRemyExternal';
 import './Appbar.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -100,8 +100,19 @@ const useStyles = makeStyles((theme) => ({
   },
   appBarLinkBlack: {
     textDecoration: "none",
-    color: "black !important"
+    color: "black",
+    paddingRight: '1vw',
+    paddingLeft: '1vw',
+    whiteSpace: 'nowrap',
+    '&:hover': {
+      backgroundColor: 'var(--backgroundColor)',
+      color: 'var(--thirdColor)'
+   },
   },
+  apply: {
+    marginTop: 'auto',
+    marginBottom: 'auto'
+  }
 }));
 
 export default function Appbar() {
@@ -227,38 +238,24 @@ export default function Appbar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="property listings">
-              <Link to="/about" className={classes.appBarLinkBlack}>
-                <h4 className={classes.navigation} >about</h4>
-              </Link>
-            </IconButton>
-            <IconButton aria-label="company people">
-                <Link to="/people" className={classes.appBarLinkBlack}>
-                  <h4 className={classes.navigation} >people</h4>
-                </Link>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-            >
-                <h4 className={classes.navigation} >rent</h4>
-            </IconButton>
-            <IconButton aria-label="company people">
-                <Link to="/contact" className={classes.appBarLinkBlack}>
-                  <h4 className={classes.navigation} >contact us</h4>
-                </Link>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-            >
-              <a href="https://remyproperties.managebuilding.com/Resident/rental-application/" target="blank" className={classes.appBarLinkBlack}>
-                <Button variant="contained" >apply today!</Button>
-              </a>
-            </IconButton>
+            <Link to="/about" className={classes.appBarLinkBlack}>
+              <h4 className={classes.navigation} >about</h4>
+            </Link>
+            <Link to="/people" className={classes.appBarLinkBlack}>
+              <h4 className={classes.navigation} >people</h4>
+            </Link>
+            <Link to="/properties" className={classes.appBarLinkBlack}>
+              <h4 className={classes.navigation} >properties</h4>
+            </Link>
+            <Link to="/neighborhoods" className={classes.appBarLinkBlack}>
+              <h4 className={classes.navigation} >neighborhoods</h4>
+            </Link>
+            <Link to="/contact" className={classes.appBarLinkBlack}>
+              <h4 className={classes.navigation} >contact us</h4>
+            </Link>
+            <div className={classes.apply}>
+              <ButtonRemyExternal text="Apply Today" link="https://remyproperties.managebuilding.com/Resident/rental-application/"/>
+            </div>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

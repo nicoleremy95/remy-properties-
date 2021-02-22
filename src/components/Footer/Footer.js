@@ -7,7 +7,7 @@ import MailIcon from '@material-ui/icons/Mail';
 
 const useStyles = makeStyles((theme)=>({
     box: {
-        backgroundColor: 'var(--footerColor)',
+        backgroundColor: 'var(--thirdColor)',
         padding: '5vw'
     },
     logoLocation: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme)=>({
         
     },
     textAtl: {
-        color: 'var(--thirdColor)'
+        color: 'var(--secondaryColor)'
     }
 }));
 
