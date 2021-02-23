@@ -13,7 +13,6 @@ import FadeInHorizontalLeft from '../FadeInHorizontalLeft/FadeInHorizontalLeft';
 
 const useStyles = makeStyles((theme)=>({
     box: {
-        // marginBottom: "-510px"
     },
     colorText: {
         color: "var(--mainColor)",
@@ -21,11 +20,14 @@ const useStyles = makeStyles((theme)=>({
     },
     text: {
         marginTop: '20vh',        
-        paddingRight: '100px'
+        paddingRight: '100px',
+        marginBottom: '2vh',
     },
     textRight: {
         marginTop: '20vh',  
-        paddingLeft: '100px'
+        paddingLeft: '100px',
+        marginBottom: '2vh'
+
     },
     title:{
         letterSpacing: "2px"
@@ -34,11 +36,9 @@ const useStyles = makeStyles((theme)=>({
         letterSpacing: "2px"
     },
     background: {
-        // opacity: .5,
         width: '100%',
         filter: 'grayscale(70%)',
-        // background: AmericanLakeSquare,
-        // filter: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
+        height: '100%'
     },
     overlay: {
         position: 'relative',
@@ -48,11 +48,9 @@ const useStyles = makeStyles((theme)=>({
 
     },
     backgroundRight: {
-        // opacity: .5,
         width: '100%',
         filter: 'grayscale(70%) ',
-        // background: AmericanLakeSquare,
-        // backgroundImage: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
+        height: '100%'
     },
     overlayRight: {
         position: 'relative',
