@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import FadeInSection from '../FadeIn/FadeInSection';
 import { Link } from 'react-router-dom';
 import ButtonRemy from '../ButtonRemy/ButtonRemy';
+import DropdownBtn from '../DropdownBtn/DropdownBtn';
 
 const propertiesArr= [
     {
@@ -111,7 +112,7 @@ const useStyles = makeStyles((Theme) =>
         backgroundRight: {
             // opacity: .5,
             width: '100%',
-            filter: 'grayscale(70%) blur(1px)',
+            filter: 'grayscale(70%) ',
             // background: AmericanLakeSquare
             // backgroundImage: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%)"
         },
@@ -146,13 +147,16 @@ export default function PropertyCards() {
                                             link={property.link}
                                         />
                                     </Link>
+                                    <DropdownBtn
+                                        text="view details"
+                                    />
                                 </div>
                                 </FadeInSection>
                             </Container>
                         </Grid>
                         <Grid item lg={6}>
                             <img className={classes.background} src={property.img} alt={property.name}/>
-                            <img className={classes.overlay} src={property.img} alt={property.name}/>
+                            {/* <img className={classes.overlay} src={property.img} alt={property.name}/> */}
                         </Grid>
                     </Grid> 
                 ))}

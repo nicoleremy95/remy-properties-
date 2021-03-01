@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme)=>({
     },
     title:{
         letterSpacing: "2px",
-        fontSize: '10vh'
+        // fontSize: '10vh'
     },
     paragraph: {
         letterSpacing: "2px",
@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme)=>({
     background: {
         // filter: 'sepia(30%) ',
         width: '100%',
+        height: '100%',
         opacity: '.5',
         // backgroundImage: "linear-gradient(180deg,rgba(18,18,18,0.5) 0%,#121212 100%), url('src/images/AmericanLakeSquare.jpg')"
     },
